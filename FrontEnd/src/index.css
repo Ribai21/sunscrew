@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+    display: none;
+}
+.swiper-button-prev, .swiper-button-next {
+color: #eab308 !important;    
+}
+:root {
+    --swiper-theme-color: #eab308 !important;
+}
+
+.active {
+  @apply bg-yellow-500 text-white;
+}
+
+.clip{
+    position: relative;
+    /* height: 200px; */
+    width: 250px;
+    background: rgba(0, 0, 0, 0.45);
+    /* Consider using a supported clip-path, e.g. polygon or svg reference */
+    -webkit-clip-path: path("M10,20 L60,20 A10,100 0 0,0 70,10 L70,10 A10,10 0 0,1 80,0 L140,0 A10,10 0 0,1 150,10 L150,190 A10,10 0 0,1 140,200 L10,200 A10,10 0 0,1 0,190 L0,30 A10,10 0 0,1 10,20 Z");
+    overflow: hidden;
+}
