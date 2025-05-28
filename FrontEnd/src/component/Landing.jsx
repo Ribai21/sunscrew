@@ -7,10 +7,12 @@ import Why from './Why'
 import Footer from './Footer'
 import Testimonials from './Testimonials'
 import Contact from './Contact'
+import Dryscrew from '../Pages/Dryscrew'
 
 const Landing = () => {
   return (
     <div>
+      
         <Navbar/>
         <Hero/>
         <About/>

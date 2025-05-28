@@ -1,7 +1,10 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { Link } from 'react-scroll'
+import { useNavigate } from 'react-router-dom'
 const Footer = () => {
+  const navigate =useNavigate();
   return (
    <footer className="bg-[#1d2a3a] text-white px-6 md:px-12 py-10">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -28,9 +31,9 @@ const Footer = () => {
     <div>
       <h3 className="text-lg font-bold mb-4">Quick Links</h3>
       <ul className="space-y-2 text-sm">
-        <li><a href="#" className="text-yellow-500 hover:text-yellow-500">Home</a></li>
-        <li><a href="#" className="hover:text-yellow-500">Products</a></li>
-        <li><a href="#" className="hover:text-yellow-500">About Us</a></li>
+        <li><a href='/' className="text-yellow-500 hover:text-yellow-500">Home</a></li>
+        <li><a href="product" className="hover:text-yellow-500">Products</a></li>
+        <li><a href="" className="hover:text-yellow-500">About Us</a></li>
         <li><a href="#" className="hover:text-yellow-500">Contact</a></li>
         <li><a href="#" className="hover:text-yellow-500">Quality Assurance</a></li>
       </ul>

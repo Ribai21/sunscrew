@@ -4,8 +4,10 @@ import img2 from '../assets/screw2.jpg'
 import img3 from '../assets/screw3.jpg'
 import img4 from '../assets/screw4.jpg'
 import img5 from '../assets/screw5.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Product = () => {
+  const navigate = useNavigate();
     const products = [
         {
             id: 1,
@@ -58,7 +60,9 @@ const Product = () => {
         <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
         <p className="text-gray-700 mb-4 text-justify">{product.description}</p>
         <p className="text-lg font-bold text-yellow-500">{product.price}</p>
-        <button className="w-full bg-yellow-500 px-3 py-2 mt-2 rounded-md font-semibold hover:bg-yellow-600 transition duration-100 active:scale-95">
+        <button
+        onClick={()=> navigate('/dryscrew')}
+        className="w-full bg-yellow-500 px-3 py-2 mt-2 rounded-md font-semibold hover:bg-yellow-600 transition duration-100 active:scale-95">
           Learn More
         </button>
       </div>
