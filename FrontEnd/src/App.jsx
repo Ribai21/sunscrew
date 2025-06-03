@@ -2,7 +2,8 @@ import React, {  useEffect, useState } from 'react'
 import Landing from './component/Landing'
 import { FaArrowUp } from "react-icons/fa";
 import { Routes, Route } from 'react-router-dom'
-import Dryscrew from './Pages/Dryscrew'
+import Dryscrew from './Pages/ProductDetail'
+import ProductDetail from './Pages/ProductDetail';
 
 
 const App = () => {
@@ -23,8 +24,11 @@ const App = () => {
   return (
     <div className='w-full'>
       <Routes>
-          <Route path="/" element={<Landing/>}/>
+          {/* <Route path="/" element={<Landing/>}/>
           <Route path="/dryscrew" element={<Dryscrew/>}/>
+           */}
+           <Route path="/" element={<Landing />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         </Routes>
 
       <div className={`fixed z-50 bottom-4 right-7 bg-yellow-500 p-3 rounded-full shadow-lg ${visibility?"scale-100":"scale-0"} hover:bg-yellow-600 transition-all duration-300`}>

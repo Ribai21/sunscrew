@@ -7,7 +7,7 @@ import Why from './Why'
 import Footer from './Footer'
 import Testimonials from './Testimonials'
 import Contact from './Contact'
-import Dryscrew from '../Pages/Dryscrew'
+import Dryscrew from '../Pages/ProductDetail'
 
 const Landing = () => {
   return (

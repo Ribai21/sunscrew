@@ -18,6 +18,10 @@ const Contact = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!formData.mobile || formData.name|| formData.email || formData.message){
+      alert("Please Fill All The Fields");
+      return;
+    }
     
     console.log('Form submitted:', formData);
     setTimeout(() => {
@@ -125,8 +129,9 @@ const Contact = () => {
               </button>
               {/* Optional: Add a success message or reset form after submission */}  
               {isSubmitted && (
-                <div className="mt-4 text-green-600">
-                  <p>Thank you! Your message has been sent.</p>
+                <div className="mt-4 ">
+                  {/* <p>Thank you! Your message has been sent.</p> */}
+                  <p className='text-red-600'>There is a Error!  Please Try With Phone Number </p>
                 </div>
               )}
             </form>

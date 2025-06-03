@@ -62,10 +62,10 @@ return (
             <div className="md:hidden  flex items-center">
                 <button onClick={()=>setOpen(!open)} className="text-gray-700 hover:text-blue-500 focus:outline-none">
                    
-                    {open ? <CgMenuRightAlt size={30} className='text-yellow-500'/>  : <RiCloseLargeLine size={30} className="text-yellow-500" />}
+                    {open ? <RiCloseLargeLine size={30} className='text-yellow-500'/>  : <CgMenuRightAlt size={30} className="text-yellow-500" />}
                 </button>
             </div>
-            <div className={`absolute top-0   h-screen w-56 z-50 ${open? "-left-[100%]" : "left-0"} transition-all duration-700 bg-white shadow-lg md:hidden flex flex-col items-center gap-4 p-4`}>
+            <div className={`absolute top-0   h-screen w-56 z-50 ${open? "left-0" : "-left-[100%]"} transition-all duration-700 bg-white shadow-lg md:hidden flex flex-col items-center gap-4 p-4`}>
                 <ul className='list-none p-5 font-semibold space-y-10'>
                    {nav.map((item)=>(
                     <li key={item.id} className="text-gray-700 hover:text-blue-500">

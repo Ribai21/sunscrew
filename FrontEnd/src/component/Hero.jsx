@@ -1,9 +1,9 @@
 import React from 'react'
-import heroimg from '../assets/hero.jpg'
+import heroimg from '../assets/oglogo.jpeg'
 import { Link } from 'react-scroll'
 const Hero = () => {
 return (
-    <section id="/" className="flex flex-col p-3 md:p-0 items-center justify-center min-h-screen bg-cover bg-fixed  bg-center text-white" style={{ backgroundImage: `url(${heroimg})` }}>
+    <section id="/" className="flex flex-col bg-gradient-to-t p-3 md:p-0 items-center justify-center min-h-screen bg-fit bg-fixed  bg-center text-white" style={{ backgroundImage: `url(https://img.freepik.com/premium-photo/screws-pattern_87540-1393.jpg)` }}>
         
         <h1 className="text-5xl text-start font-bold mb-4 text-yellow-500">Precision Screws.</h1>
         <h1 className="text-5xl font-bold mb-4 text-yellow-500">Trusted Strength.</h1>
