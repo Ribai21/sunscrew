@@ -18,12 +18,18 @@ const Contact = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!formData.mobile || formData.name|| formData.email || formData.message){
-      alert("Please Fill All The Fields");
+    if(!formData.mobile || !formData.name|| !formData.email || !formData.message){
+      // alert("Please Fill All The Fields");
+      setIsSubmitted("All Fields Are Required");
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 4000);
       return;
     }
     
     console.log('Form submitted:', formData);
+    // setIsSubmitted("Thank you! Your message has been sent.");
+    setIsSubmitted("There is a Error!  Please Try With Phone Number")
     setTimeout(() => {
       setIsSubmitted(false)
     }, 2000);
@@ -131,7 +137,7 @@ const Contact = () => {
               {isSubmitted && (
                 <div className="mt-4 ">
                   {/* <p>Thank you! Your message has been sent.</p> */}
-                  <p className='text-red-600'>There is a Error!  Please Try With Phone Number </p>
+                  <p className='text-red-600'>{isSubmitted}</p>
                 </div>
               )}
             </form>

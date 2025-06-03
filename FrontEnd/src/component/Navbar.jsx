@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logorevised.jpg'
 import { CgMenuRightAlt } from "react-icons/cg";
 import { RiCloseLargeLine } from "react-icons/ri";
 import {Link} from 'react-scroll';
@@ -34,10 +34,10 @@ const Navbar = () => {
 
 return (
     
-    <div className='sticky top-0 z-50'>
-        <nav className="flex items-center relative w-full top-0 justify-between h-20 py-3 px-4 bg-white ">
+    
+    <nav className="flex items-center sticky z-50 w-full top-0 justify-between h-20 py-3 px-4 bg-white ">
             <div className="flex items-center">
-                <img src={logo} alt="Company Logo" className="h-24 mt-3 ms-8" />
+                <img src={logo} alt="Company Logo" className="h-16 mt-1 ms-8" />
             </div>
             <ul className="md:flex hidden  items-center   gap-8 list-none mr-9 p-0">
                 {nav.map((item)=>(
@@ -69,7 +69,7 @@ return (
                 <ul className='list-none p-5 font-semibold space-y-10'>
                    {nav.map((item)=>(
                     <li key={item.id} className="text-gray-700 hover:text-blue-500">
-                    <Link to={item.link} smooth={true} className="no-underline text-gray-900 font-medium hover:text-yellow-600">{item.name}</Link>
+                    <Link to={item.link} smooth={true} onClick={()=>setOpen(false)} className="no-underline text-gray-900 font-medium hover:text-yellow-600">{item.name}</Link>
                 </li>
                 ))}
                 
@@ -77,7 +77,7 @@ return (
                 
             </div>
         </nav>
-    </div>
+    
 )
 }
 

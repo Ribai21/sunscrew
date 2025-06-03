@@ -1,17 +1,17 @@
 import React from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logorevised.jpg'
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-scroll'
-import { useNavigate } from 'react-router-dom'
+import { Links, useNavigate } from 'react-router-dom'
 const Footer = () => {
   const navigate =useNavigate();
   return (
-   <footer className="bg-[#1d2a3a] text-white px-6 md:px-12 py-10">
+   <footer className="bg-[#1d2a3a]  text-white px-6 md:px-12 py-10">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
     
     {/* Company Info with Logo */}
     <div>
-      <img src={logo} alt="SUN Screws Logo" className="h-28 " />
+      <img src={logo} alt="SUN Screws Logo" className="h-20 mb-2 " />
       <p className="text-sm leading-relaxed">
         Precision Screws. Trusted Strength. <br />
         Your reliable partner for world-class fastening solutions with over 25 years of industry experience.
@@ -31,11 +31,11 @@ const Footer = () => {
     <div>
       <h3 className="text-lg font-bold mb-4">Quick Links</h3>
       <ul className="space-y-2 text-sm">
-        <li><a href='/' className="text-yellow-500 hover:text-yellow-500">Home</a></li>
-        <li><a href="product" className="hover:text-yellow-500">Products</a></li>
-        <li><a href="" className="hover:text-yellow-500">About Us</a></li>
-        <li><a href="#" className="hover:text-yellow-500">Contact</a></li>
-        <li><a href="#" className="hover:text-yellow-500">Quality Assurance</a></li>
+        <li><Link to='/' className="text-yellow-500 cursor-pointer hover:text-yellow-500">Home</Link></li>
+        <li><Link to="product"  smooth={true} className="cursor-pointer hover:text-yellow-500">Products</Link></li>
+        <li><Link to="about" smooth={true} className="hover:text-yellow-500 cursor-pointer">About Us</Link></li>
+        <li><Link to="contact" smooth={true} className="hover:text-yellow-500 cursor-pointer">Contact</Link></li>
+        <li><Link to="/" className="hover:text-yellow-500 cursor-pointer">Quality Assurance</Link></li>
       </ul>
     </div>
 

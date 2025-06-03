@@ -24,9 +24,7 @@ const App = () => {
   return (
     <div className='w-full'>
       <Routes>
-          {/* <Route path="/" element={<Landing/>}/>
-          <Route path="/dryscrew" element={<Dryscrew/>}/>
-           */}
+          
            <Route path="/" element={<Landing />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         </Routes>

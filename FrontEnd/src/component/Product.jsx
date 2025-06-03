@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import products from "./Data/ProductData";
 const Product = () => {
-  const navigate = useNavigate();
+  
 
   return (
     // grid grid-cols-1 justify-evenly items-center md:grid-cols-2 gap-3 lg:grid-cols-3
@@ -17,7 +17,7 @@ const Product = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-3 rounded-lg shadow-lg flex flex-col items-center text-center w-full max-w-[250px]"
+              className="bg-white p-3 rounded-lg shadow-lg ani flex flex-col items-center text-center w-full max-w-[250px]"
             >
               <div className="">
                 <img
