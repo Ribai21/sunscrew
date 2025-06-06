@@ -8,8 +8,10 @@ const Product = () => {
   return (
     // grid grid-cols-1 justify-evenly items-center md:grid-cols-2 gap-3 lg:grid-cols-3
     <div>
-      <section id="product" className="bg-gray-100 w-full p-3 md:p-10">
-        <h1 className=" text-4xl  text-center  md:text-5xl m-3 mb-6 font-bold">
+      <section
+      
+      id="product" className="bg-gray-100 w-full p-3 md:p-10">
+        <h1  className=" text-4xl fadeup  text-center  md:text-5xl m-3 mb-6 font-bold">
           Our <span className="text-yellow-500">Products</span>
           <hr className="bg-yellow-500 h-1 w-[15%] rounded mt-3 mx-auto" />
         </h1>

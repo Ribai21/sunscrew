@@ -43,9 +43,9 @@ const Contact = () => {
   return (
     <div id='contact' className="min-h-screen px-4 py-12 bg-gray-100">
       <div className="max-w-6xl mx-auto bg-white shadow-xl rounded-lg p-6 md:p-10">
-        <h2 className="text-4xl font-bold text-center  mb-10">Contact <span className='text-yellow-500'>Us</span></h2>
+        <h2 className="text-4xl fadeup font-bold text-center  mb-10">Contact <span className='text-yellow-500'>Us</span><hr className="bg-yellow-500 h-1 w-[10%] rounded mt-3 mx-auto" /></h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid ani  md:grid-cols-2 gap-10">
           {/* Left Column: Contact Info + Map */}
           <div className="space-y-8">
             {/* Contact Info */}

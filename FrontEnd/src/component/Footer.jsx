@@ -6,8 +6,8 @@ import { Links, useNavigate } from 'react-router-dom'
 const Footer = () => {
   const navigate =useNavigate();
   return (
-   <footer className="bg-[#1d2a3a]  text-white px-6 md:px-12 py-10">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+   <footer className="bg-[#1d2a3a] ani  text-white px-6 md:px-12 py-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
     
     {/* Company Info with Logo */}
     <div>
@@ -52,7 +52,7 @@ const Footer = () => {
     </div>
 
     {/* Newsletter */}
-    <div>
+    {/* <div>
       <h3 className="text-lg font-bold mb-4">Stay Updated</h3>
       <p className="text-sm mb-4">
         Subscribe to our newsletter for the latest product updates and industry insights.
@@ -65,13 +65,13 @@ const Footer = () => {
       <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">
         Subscribe
       </button>
-    </div>
+    </div> */}
 
   </div>
 
   {/* Footer Bottom */}
   <div className="border-t border-gray-600 mt-10 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-    <p>© 2024 SUN Screws. All rights reserved. | ISO 9001 Certified</p>
+    <p>Copyright © 2024 SUN Screws. All rights reserved. Made By <span className='text-yellow-500 '>Ribai</span> | ISO 9001 Certified</p>
     <div className="flex gap-4 mt-2 md:mt-0">
       <a href="#" className="hover:text-yellow-500">Privacy Policy</a>
       <a href="#" className="hover:text-yellow-500">Terms of Service</a>

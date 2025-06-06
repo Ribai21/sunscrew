@@ -33,7 +33,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-100  py-16 px-4 md:px-10" id="testimonials">
+    <section className="bg-gray-100 fadeup py-16 px-4 md:px-10" id="testimonials">
       <h2 className="text-4xl font-bold text-center mb-10">
         What Our <span className="text-yellow-500">Clients Say</span><hr className='bg-yellow-500 h-1 w-[20%] rounded mt-3 mx-auto' />
       </h2>
@@ -54,7 +54,7 @@ const Testimonials = () => {
       >
         {testimonials.map((t, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all h-full">
+            <div className="bg-white  p-6 rounded-xl shadow-md hover:shadow-xl transition-all h-full">
               <div className="flex flex-col items-center text-center">
                 <img
                 //   src={t.image}

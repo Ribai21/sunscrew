@@ -1,10 +1,11 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Products from '../component/Data/ProductData'
 import { CgArrowLeft } from 'react-icons/cg';
-
+import load from '../assets/logorevised.jpg'
 const ProductDetail = () => {
+  const [loading,setLoading] = useState(true);
   const { id } = useParams();
   const product = Products.find(p => p.id === parseInt(id));
   const navigate = useNavigate();
@@ -13,6 +14,20 @@ const ProductDetail = () => {
 
   if (!product) {
     return <div className="text-center text-red-600 mt-10">Product not found.</div>;
+  }
+  useEffect(()=>{
+    const timer =setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  },[])
+  if(loading){
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-100">
+        {/* <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-yellow-500"></div> */}
+        <img src={load} alt="" className='h-20 animate-pulse transition duration-75' />
+      </div>
+    );
   }
 
   return (
