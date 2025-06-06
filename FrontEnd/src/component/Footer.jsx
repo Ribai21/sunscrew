@@ -6,8 +6,8 @@ import { Links, useNavigate } from 'react-router-dom'
 const Footer = () => {
   const navigate =useNavigate();
   return (
-   <footer className="bg-[#1d2a3a] ani  text-white px-6 md:px-12 py-10">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+   <footer className="bg-[#1d2a3a]   text-white px-6 md:px-12 py-10">
+  <div className="grid grid-cols-1 ani sm:grid-cols-2 lg:grid-cols-3 gap-10">
     
     {/* Company Info with Logo */}
     <div>
