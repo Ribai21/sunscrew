@@ -34,7 +34,7 @@ const Product = () => {
                   {product.description}
                 </p>
                 <p className="text-lg font-bold text-yellow-500">
-                  {product.price}
+                  ₹150 <span className="text-[10px]">(Perbox 100pcs)</span>
                 </p>
                 <Link to={`/product/${product.id}`}>
                   <button className="w-full bg-yellow-500 px-3 py-2 mt-2 rounded-md font-semibold hover:bg-yellow-600 transition duration-100 active:scale-95">

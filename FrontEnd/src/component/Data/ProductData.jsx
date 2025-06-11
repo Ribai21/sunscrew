@@ -15,12 +15,13 @@ import d4 from '../../assets/Dryscrew/d4.jpg'
             image:img1,
             name: 'DryWall Screw 1',
             subImages: [d1, d2, d3, d4],
-            description: 'Fine threads for easy securing of drywall panels. Bugle-shaped heads ensure a smooth finish, reducing damage risk.',
-            price: '$10',
+            description: 'Fine  threads for easy securing of drywall panels. Bugle-shaped heads ensure a smooth finish, reducing damage risk.',
+            price: '₹150',
             type:'Philips Head Screw',
             material:'Stainless steel',
             size:'1 inch',
             weight:'0.5 oz',
+            quantity:"Perbox 100pcs",
             usage: 'Ideal for securing drywall panels to wooden or metal studs, providing a strong and reliable hold in construction and renovation projects.'
         },
         {

@@ -59,12 +59,13 @@ return (
         </div></Link>
             </ul>
             {/* Mobile Menu Button */}
-            <div className="md:hidden  flex items-center">
+            <div className="md:hidden z-50  flex items-center">
                 <button onClick={()=>setOpen(!open)} className="text-gray-700 hover:text-blue-500 focus:outline-none">
                    
-                    {open ? <RiCloseLargeLine size={30} className='text-yellow-500'/>  : <CgMenuRightAlt size={30} className="text-yellow-500" />}
+                    {open ? <RiCloseLargeLine size={30} className='text-yellow-500 transition-transform duration-1000 hover:rotate-[360deg]'/>  : <CgMenuRightAlt size={30} className="text-yellow-500 " />}
                 </button>
             </div>
+              {open && <div className="absolute top-0 z-0 left-0 w-full bg-black/30 h-screen"></div>}
             <div className={`absolute top-0   h-screen w-56 z-50 ${open? "left-0" : "-left-[100%]"} transition-all duration-700 bg-white shadow-lg md:hidden flex flex-col items-center gap-4 p-4`}>
                 <ul className='list-none p-5 font-semibold space-y-10'>
                    {nav.map((item)=>(

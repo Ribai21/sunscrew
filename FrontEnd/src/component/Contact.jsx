@@ -27,6 +27,7 @@ const Contact = () => {
       return;
     }
     
+    
     console.log('Form submitted:', formData);
     // setIsSubmitted("Thank you! Your message has been sent.");
     setIsSubmitted("There is a Error!  Please Try With Phone Number")
