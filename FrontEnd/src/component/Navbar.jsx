@@ -50,7 +50,7 @@ return (
                   : 'text-gray-900 hover:text-yellow-600'
               }`}
                    >
-                    <Link to={item.link} smooth={true} className="no-underline  text-gray-900 font-medium hover:text-yellow-600">{item.name}</Link>
+                    <Link to={item.link} smooth={true} className="under relative  text-gray-900   hover:text-yellow-600">{item.name}</Link>
                 </li>
                 ))}
                 <Link to='contact' smooth={true}><div className="bg-yellow-500  relative font-semibold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300">
@@ -70,7 +70,7 @@ return (
                 <ul className='list-none p-5 font-semibold space-y-10'>
                    {nav.map((item)=>(
                     <li key={item.id} className="text-gray-700 hover:text-blue-500">
-                    <Link to={item.link} smooth={true} onClick={()=>setOpen(false)} className="no-underline text-gray-900 font-medium hover:text-yellow-600">{item.name}</Link>
+                    <Link to={item.link} smooth={true} onClick={()=>setOpen(false)} className="font-bold under  relative text-gray-900  hover:text-yellow-600">{item.name}</Link>
                 </li>
                 ))}
                 

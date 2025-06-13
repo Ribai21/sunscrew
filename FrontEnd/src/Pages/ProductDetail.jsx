@@ -45,7 +45,7 @@ const ProductDetail = () => {
         <div className="static md:absolute top-5 left-5 z-10">
           <CgArrowLeft
             size={29}
-            className="cursor-pointer text-yellow-500 inline-block hover:text-yellow-600 transition-all duration-300"
+            className="cursor-pointer text-yellow-500 absolute top-[4%] left-5 inline-block hover:text-yellow-600 transition-all duration-300"
             onClick={() => navigate(-1)}
           />
         </div>
@@ -77,7 +77,7 @@ const ProductDetail = () => {
           <h1 className="text-3xl font-bold">{product.name}</h1>
           <p>{product.description}</p>
           <p>
-            <strong>Price:</strong> {product.price}
+            <strong>Price:</strong> {product.price} <span className="text-[10px]">(Per box 100pcs)</span>
           </p>
           <p>
             <strong>Type:</strong> {product.type}
@@ -102,7 +102,7 @@ const ProductDetail = () => {
       </h1>
       <div className="grid justify-items-center lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 px-4">
         {Products.filter(p => p.id !== product.id).map(item => (
-          <div key={item.id} className="w-full h-[200px] max-w-[250px]">
+          <div key={item.id} className="w-full max-w-[250px]">
             <div className="bg-white p-3 rounded-lg mb-6 shadow-lg ani flex flex-col items-center text-center">
               <img
                 src={item.image}
