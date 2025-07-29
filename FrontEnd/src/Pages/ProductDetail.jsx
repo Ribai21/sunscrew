@@ -73,7 +73,7 @@ const ProductDetail = () => {
         </div>
 
         {/* Product Details */}
-        <div className="md:ml-6 text-justify w-full mt-6 md:mt-0 space-y-3">
+        <div className="md:ml-6 text-justify   w-full mt-6 md:mt-0 space-y-3">
           <h1 className="text-3xl font-bold">{product.name}</h1>
           <p>{product.description}</p>
           <p>
@@ -96,11 +96,11 @@ const ProductDetail = () => {
       </div>
 
       {/* Other Products */}
-      <h1 className="text-4xl fadeup text-center md:text-5xl mb-6 font-bold">
+      <h1 className="text-4xl fadeup text-center  md:text-5xl mb-6 font-bold">
         Other <span className="text-yellow-500">Products</span>
         <hr className="bg-yellow-500 h-1 w-[15%] rounded mt-3 mx-auto" />
       </h1>
-      <div className="grid justify-items-center lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 px-4">
+      <div className="grid justify-items-center  lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 px-4">
         {Products.filter(p => p.id !== product.id).map(item => (
           <div key={item.id} className="w-full max-w-[250px]">
             <div className="bg-white p-3 rounded-lg mb-6 shadow-lg ani flex flex-col items-center text-center">
