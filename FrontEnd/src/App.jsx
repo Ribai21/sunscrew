@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Landing from './component/Landing';
 import { FaArrowUp } from 'react-icons/fa';
 import { Routes, Route } from 'react-router-dom';
+import Layout from './component/Layout';
+import Home from './Pages/Home';
+import Products from './Pages/Products';
+import AboutPage from './Pages/About';
+import ContactPage from './Pages/Contact';
+import WhyChooseUs from './Pages/WhyChooseUs';
 import ProductDetail from './Pages/ProductDetail';
+import NotFound from './Pages/NotFound';
 import load from './assets/logorevised.jpg';
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -42,8 +48,15 @@ const App = () => {
   return (
     <div className="w-full">
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="why-choose-us" element={<WhyChooseUs />} />
+          <Route path="product/:id" element={<ProductDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
 
       <div
@@ -51,10 +64,10 @@ const App = () => {
           visibility ? 'scale-100' : 'scale-0'
         } hover:bg-yellow-600 transition-all duration-300`}
       >
-        <a href="#top" className="text-white">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-white">
           <FaArrowUp size={24} />
           <span className="absolute w-full h-full top-0 left-0 rounded-full animate-ping transition-all duration-1000 border border-yellow-600"></span>
-        </a>
+        </button>
       </div>
     </div>
   );

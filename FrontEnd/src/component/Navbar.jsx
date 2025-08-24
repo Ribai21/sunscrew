@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import logo from '../assets/logorevised.jpg'
 import { CgMenuRightAlt } from "react-icons/cg";
 import { RiCloseLargeLine } from "react-icons/ri";
-import {Link} from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState('Home');
+    
+    const location = useLocation();
     
     const nav =[
         {
@@ -15,21 +17,21 @@ const Navbar = () => {
         link: '/'
     }, {
         id: 2,
-        name: 'Product',
-        link: 'product'
+        name: 'Products',
+        link: '/products'
     }, {
         id: 3,
         name: 'About',
-        link: 'about'
+        link: '/about'
     }, {
         id: 4,
         name: 'Contact',
-        link: 'contact'
+        link: '/contact'
     },
      {
         id: 5,
-        name: 'Testimonials',
-        link: 'testimonials'
+        name: 'Why Choose Us',
+        link: '/why-choose-us'
     }]
 
 return (
@@ -43,17 +45,16 @@ return (
                 {nav.map((item)=>(
                     <li
                     key={item.id}
-              onClick={() => setActiveMenu(item.name)}
               className={`cursor-pointer px-4 py-2 rounded-md font-medium transition duration-300 ${
-                activeMenu === item.name
+                location.pathname === item.link
                   ? 'bg-yellow-500 text-white'
                   : 'text-gray-900 hover:text-yellow-600'
               }`}
                    >
-                    <Link to={item.link} smooth={true} className="under relative  text-gray-900   hover:text-yellow-600">{item.name}</Link>
+                    <Link to={item.link} className="under relative hover:text-yellow-600">{item.name}</Link>
                 </li>
                 ))}
-                <Link to='contact' smooth={true}><div className="bg-yellow-500  relative font-semibold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300">
+                <Link to='/contact'><div className="bg-yellow-500  relative font-semibold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300">
             Get Quote
             <span className='absolute w-full h-full top-0 left-0 rounded-lg animate-puls transition-all duration-1000 border-2 border-yellow-600'></span>
         </div></Link>
@@ -70,7 +71,7 @@ return (
                 <ul className='list-none p-5 font-semibold space-y-10'>
                    {nav.map((item)=>(
                     <li key={item.id} className="text-gray-700 hover:text-blue-500">
-                    <Link to={item.link} smooth={true} onClick={()=>setOpen(false)} className="font-bold under  relative text-gray-900  hover:text-yellow-600">{item.name}</Link>
+                    <Link to={item.link} onClick={()=>setOpen(false)} className="font-bold under  relative text-gray-900  hover:text-yellow-600">{item.name}</Link>
                 </li>
                 ))}
                 

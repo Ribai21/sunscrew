@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import Products from '../component/Data/ProductData';
 import { CgArrowLeft } from 'react-icons/cg';
 import load from '../assets/logorevised.jpg';
+import ProductCard from '../component/ProductCard';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -41,7 +42,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full p-5 md:p-7 mt-10 flex flex-col md:flex-row items-center">
+      <div className="min-h-screen w-full p-5 md:p-7  flex flex-col md:flex-row items-center">
         <div className="static md:absolute top-5 left-5 z-10">
           <CgArrowLeft
             size={29}
@@ -55,14 +56,14 @@ const ProductDetail = () => {
             alt={product.name}
             className="md:max-w-md rounded shadow-md"
           />
-          <div className="flex overflow-auto w-full gap-2 mt-4">
+          <div className="flex overflow-auto w-full gap-2 ">
             {[product.image, ...(product.subImages || [])].map((img, idx) => (
               <img
                 key={idx}
                 src={img}
                 alt={`Thumb ${idx}`}
                 onClick={() => setSelectedImage(img)}
-                className={`w-16 h-16 object-cover rounded cursor-pointer border-2 ${
+                className={`w-16 h-16 object-cover mt-2 rounded cursor-pointer border-2 ${
                   selectedImage === img
                     ? 'border-yellow-500'
                     : 'border-gray-300'
@@ -73,7 +74,7 @@ const ProductDetail = () => {
         </div>
 
         {/* Product Details */}
-        <div className="md:ml-6 text-justify   w-full mt-6 md:mt-0 space-y-3">
+        <div className="md:ml-6 text-justify   w-full  md:mt-0 space-y-3">
           <h1 className="text-3xl font-bold">{product.name}</h1>
           <p>{product.description}</p>
           <p>
@@ -100,29 +101,15 @@ const ProductDetail = () => {
         Other <span className="text-yellow-500">Products</span>
         <hr className="bg-yellow-500 h-1 w-[15%] rounded mt-3 mx-auto" />
       </h1>
-      <div className="grid justify-items-center  lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 px-4">
+      <div className="grid justify-items-center mb-10  lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 px-4">
         {Products.filter(p => p.id !== product.id).map(item => (
-          <div key={item.id} className="w-full max-w-[250px]">
-            <div className="bg-white p-3 rounded-lg mb-6 shadow-lg ani flex flex-col items-center text-center">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full hover:scale-105 transition duration-300 mb-3 rounded-md h-auto"
-              />
-              <h2 className="text-xl font-semibold mb-2">{item.name}</h2>
-              <p className="text-gray-700 mb-4 text-justify">
-                {item.description}
-              </p>
-              <p className="text-lg font-bold text-yellow-500">
-                ₹150 <span className="text-[10px]">(Perbox 100pcs)</span>
-              </p>
-              <Link to={`/product/${item.id}`}>
-                <button className="w-full bg-yellow-500 px-3 py-2 mt-2 rounded-md font-semibold hover:bg-yellow-600 transition duration-100 active:scale-95">
-                  Learn More
-                </button>
-              </Link>
-            </div>
-          </div>
+          <ProductCard
+            key={item.id}
+            id={item.id}
+            image={item.image}
+            name={item.name}
+            description={item.description}
+          />
         ))}
       </div>
     </>

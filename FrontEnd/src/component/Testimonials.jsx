@@ -3,7 +3,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import test from '../assets/test.png'
 const testimonials = [
   {
     name: "Amit Sharma",
@@ -33,8 +33,13 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-100 fadeup py-16 px-4 md:px-10" id="testimonials">
-      <h2 className="text-4xl font-bold text-center mb-10">
+   <section
+  className="bg-gray-100 bg-center bg-fixed  py-16 px-4 md:px-10"
+  id="testimonials"
+   style={{ backgroundImage: `url(${test})` }}
+>
+
+      <h2 className="text-4xl font-bold text-center  mb-10">
         What Our <span className="text-yellow-500">Clients Say</span><hr className='bg-yellow-500 h-1 w-[20%] rounded mt-3 mx-auto' />
       </h2>
 
@@ -50,7 +55,7 @@ const Testimonials = () => {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        className="max-w-6xl mx-auto"
+        className="max-w-6xl mx-auto "
       >
         {testimonials.map((t, index) => (
           <SwiperSlide key={index}>

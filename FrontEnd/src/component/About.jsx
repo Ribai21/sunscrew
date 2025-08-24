@@ -2,6 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import story from '../assets/story1.png'
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: false, // Only animate once
@@ -18,7 +19,9 @@ const About = () => {
           Our <span className="text-yellow-500">Story</span>
           <hr className="bg-yellow-500 h-1 w-[10%] rounded mt-3 mx-auto" />
         </h1>
-        <p className="indent-32 textup  text-lg text-justify">
+       <section className="grid grid-cols-2 max-h-54 gap-3 overflow-hidden"> 
+         <section>
+          <p className="indent-32 textup  text-lg text-justify">
           Founded in [2015], Sun Screw started with a simple yet powerful goal:
           to create screw products that deliver unmatched quality and
           performance at every turn. Over the past 10 years, we've: Expanded
@@ -39,6 +42,11 @@ const About = () => {
           satisfaction. Every screw we produce reflects our promise of strength,
           durability, and flawless performance.
         </p>
+        </section>
+        <section className="py-3 ">
+          <img src={story} alt="story" className="w-full bg-cover ms-2 h-3/4 rounded-bl-[20%] rounded-tr-[20%] " />
+        </section>
+       </section>
       </section>
       <section className="flex fadeup bg-[#1d2a3a] justify-evenly items-center  flex-wrap gap-5 p-5 text-capitaliz">
         <div className="flex flex-col text-white text-xl justify-center gap-2 items-center">

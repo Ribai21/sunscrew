@@ -71,7 +71,7 @@ const Footer = () => {
 
   {/* Footer Bottom */}
   <div className="border-t border-gray-600 mt-10 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-    <p>Copyright © 2024 SUN Screws. All rights reserved. Made By <span className='text-yellow-500 '>Ribai</span> | ISO 9001 Certified</p>
+    <p>Copyright &copy; {new Date().getFullYear()} SUN Screws. All rights reserved. Made By <span className='text-yellow-500 '>Ribai</span> | ISO 9001 Certified</p>
     <div className="flex gap-4 mt-2 md:mt-0">
       <a href="#" className="hover:text-yellow-500">Privacy Policy</a>
       <a href="#" className="hover:text-yellow-500">Terms of Service</a>
