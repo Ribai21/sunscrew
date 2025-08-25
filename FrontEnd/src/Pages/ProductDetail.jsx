@@ -99,7 +99,7 @@ const ProductDetail = () => {
       {/* Other Products */}
       <h1 className="text-4xl fadeup text-center  md:text-5xl mb-6 font-bold">
         Other <span className="text-yellow-500">Products</span>
-        <hr className="bg-yellow-500 h-1 w-[15%] rounded mt-3 mx-auto" />
+        <hr className="bg-yellow-500 h-2 w-[15%] rounded mt-3 mx-auto" />
       </h1>
       <div className="grid justify-items-center mb-10  lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 px-4">
         {Products.filter(p => p.id !== product.id).map(item => (
