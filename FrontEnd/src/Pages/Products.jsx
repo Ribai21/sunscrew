@@ -1,6 +1,6 @@
 import React from 'react'
 import Product from '../component/Product'
-import TopImage from '../component/TopImage'
+import TopImage from '../component/Topimage'
 import product from '../assets/product.png'
 const Products = () => {
   return (

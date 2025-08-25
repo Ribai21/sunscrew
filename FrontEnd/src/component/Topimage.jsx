@@ -1,5 +1,4 @@
 
-// Reusable TopImage component with overlay, text and subtext
  const TopImage = ({ imageUrl, title, subtext, overlayOpacity = 0.5, height = "h-96" }) => {
   return (
     <div className={`relative w-full ${height} bg-no-repeat bg-fixed bg-center bg-cover overflow-hidden`}
@@ -25,11 +24,3 @@
   );
 };
 export default TopImage;
-
-// Example usage:
-// <TopImage 
-//   imageUrl="/path/to/image.jpg"
-//   title="Welcome Title"
-//   subtext="Some descriptive text here"
-//   overlayOpacity={0.6}
-// />
