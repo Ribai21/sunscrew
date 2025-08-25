@@ -1,6 +1,6 @@
 import React from 'react'
 import Contact from '../component/Contact'
-import TopImage from '../component/TopImage'
+import TopImage from '../component/Topimage'
 import contact from '../assets/contact.png'
 const ContactPage = () => {
   return (

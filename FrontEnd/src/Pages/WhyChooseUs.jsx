@@ -1,7 +1,7 @@
 import React from 'react'
 import Why from '../component/Why'
 import Testimonials from '../component/Testimonials'
-import TopImage from '../component/TopImage'
+import TopImage from '../component/Topimage'
 import why from '../assets/why1.png'
 const WhyChooseUs = () => {
   return (

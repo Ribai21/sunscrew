@@ -1,7 +1,7 @@
 import React from "react";
 import About from "../component/About";
 import Why from "../component/Why";
-import TopImage from "../component/TopImage";
+import TopImage from "../component/Topimage";
 import about from '../assets/about.png'
 const AboutPage = () => {
   return (
